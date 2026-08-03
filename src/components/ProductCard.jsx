@@ -3,7 +3,7 @@ import man from "../assets/images/Product left down.jpg"
 import woman_right from "../assets/images/Product right.jpg"
 function ProductCard() {
     return ( <>
-        <section className="flex p-10  gap-8">
+        <section className="flex flex-col p-10  gap-8 lg:flex flex-row ">
             <div>
                 <div className="flex-col gap-4">
                     <div className="relative mb-8">
