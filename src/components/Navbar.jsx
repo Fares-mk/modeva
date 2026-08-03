@@ -1,69 +1,57 @@
 import { FaSearch } from "react-icons/fa";
+import { LuUser, LuShoppingCart } from "react-icons/lu";
 
 function Navbar() {
   return (
     <>
       <p
-        className="text-center text-white text-sm md:text-base py-2"
-        style={{ backgroundColor: "#008E93" }}
+        className="text-center text-white text-xs sm:text-sm md:text-base"
+        style={{ fontSize: 16, backgroundColor: "#008E93" }}
       >
         Discount 20% For New Member, <strong>ONLY FOR TODAY!!</strong>
       </p>
 
-      <nav className="bg-transparent p-4 md:p-8 lg:p-10">
-        <ul className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 text-white">
+      <nav className="bg-transparent-500 p-4 sm:p-6 md:p-8 lg:p-10">
+        <ul className="flex flex-col lg:flex-row gap-6 lg:gap-8 items-center text-white">
 
-          {/* Logo */}
           <li>
             <a href="">
               <img
-                src="src/assets/images/Modeva.png"
-                alt="Modeva"
-                className="w-36 md:w-44"
+                src="src\assets\images\Modeva.png"
+                alt=""
+                className="w-32 sm:w-40 md:w-auto"
               />
             </a>
           </li>
 
-          {/* Menu */}
-          <div className="flex flex-col lg:flex-row gap-4 lg:gap-8">
-            <li><a href="">Catalog</a></li>
-            <li><a href="">Sale</a></li>
-            <li><a href="">New Arrival</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Dashboard</a></li>
-          </div>
+          <li><a href="">catalog</a></li>
+          <li><a href="">sale</a></li>
+          <li><a href="">New Arrival</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Dashboard</a></li>
 
-          {/* Search & Icons */}
           <li className="w-full lg:w-auto">
-            <div className="flex flex-col sm:flex-row items-center gap-3">
+            <div className="flex flex-col sm:flex-row gap-3 items-center">
 
-              <div className="relative w-full sm:w-64">
-                <FaSearch className="absolute left-3 top-3 text-gray-400" />
+              <div className="relative w-full sm:w-auto">
+                <FaSearch className="absolute left-1 top-1.5 text-gray-400" />
 
                 <input
-                  className="bg-white text-gray-500 pl-10 py-2 rounded-md w-full outline-none"
+                  className="bg-white text-gray-500 pl-7 w-full sm:w-auto"
                   type="search"
-                  placeholder="Search"
+                  name=""
+                  id=""
+                  placeholder="search"
                 />
               </div>
 
-              <div className="flex gap-3">
-                <a href="">
-                  <img
-                    src="src/assets/images/user.svg"
-                    alt="User"
-                    className="w-6 h-6"
-                  />
-                </a>
+              <a href="">
+                <img src="src\assets\images\user.svg" alt="" />
+              </a>
 
-                <a href="">
-                  <img
-                    src="src/assets/images/shopping-cart.svg"
-                    alt="Cart"
-                    className="w-6 h-6"
-                  />
-                </a>
-              </div>
+              <a href="">
+                <img src="src\assets\images\shopping-cart.svg" alt="" />
+              </a>
 
             </div>
           </li>
