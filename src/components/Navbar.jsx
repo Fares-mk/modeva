@@ -1,5 +1,8 @@
 import { FaSearch } from "react-icons/fa";
 import { LuUser, LuShoppingCart } from "react-icons/lu";
+import modeva from "../assets/images/Modeva.png"
+import user from "../assets/images/user.svg"
+import cart from "../assets/images/shopping-cart.svg"
 
 function Navbar() {
   return (
@@ -17,7 +20,7 @@ function Navbar() {
           <li>
             <a href="">
               <img
-                src="src\assets\images\Modeva.png"
+                src={modeva}
                 alt=""
                 className="w-32 sm:w-40 md:w-auto"
               />
@@ -46,11 +49,11 @@ function Navbar() {
               </div>
 
               <a href="">
-                <img src="src\assets\images\user.svg" alt="" />
+                <img src={user}alt="" />
               </a>
 
               <a href="">
-                <img src="src\assets\images\shopping-cart.svg" alt="" />
+                <img src={cart} alt="" />
               </a>
 
             </div>
