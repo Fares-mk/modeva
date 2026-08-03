@@ -11,7 +11,7 @@ function Services() {
      const description =
     "Lorem ipsum dolor sit amet consectetur. Suspendisse laoreet scelerisque morbi vulputate. Quisque bibendum eget id diam elementum fringilla duis.";
     return ( <>
-        <section className=" py-10 mb-72">
+        <section className=" py-10 mb-50">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid gap-6 lg:grid-cols-[1fr_2fr_1fr]">
           <VerticalFeature

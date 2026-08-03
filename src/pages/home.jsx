@@ -1,5 +1,6 @@
 
 import Category from "../components/Category";
+import Feedback from "../components/Feedback";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import ProductCard from "../components/ProductCard"
@@ -13,6 +14,7 @@ function Home () {
             <Category title={"the best dress for the best woman"}/>
             <Category title={"Best outfit for your happiness "}/>
             <Services />
+            <Feedback />
             <Footer /> 
         </>
     );

@@ -4,9 +4,6 @@ function Footer() {
   return (
     <>
       <section className="bg-[#008E93] flex flex-col lg:flex-row justify-between items-start gap-10 px-6 md:px-10 py-20 lg:py-72 text-white relative">
-
-        <Feedback />
-
         {/* Logo & Contact */}
         <div className="w-full lg:w-auto text-center lg:text-left">
           <h1 className="uppercase text-4xl md:text-5xl lg:text-6xl mb-3">

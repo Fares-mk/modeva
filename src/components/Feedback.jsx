@@ -2,7 +2,7 @@ import circle from "../assets/images/brown circle.png"
 import star from "../assets/images/star.svg"
 function Feedback() {
     return ( <>
-        <section className="absolute bg-[#F2F2F2] pt-20 top-1 flex gap-6 overflow-clip">
+        <section className=" bg-[#F2F2F2] pt-20 top-1 flex gap-6 mb-10">
             <div className="bg-white p-4">
                 <div className="justify-between flex gap-6">
                 <div className="flex  gap-2">
