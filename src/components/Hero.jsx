@@ -13,7 +13,6 @@ function Hero() {
 
       <div className="max-w-7xl mx-auto h-screen flex items-center justify-between px-8">
 
-        {/* Left Content */}
 
         <div className="text-white max-w-xl">
 
@@ -27,14 +26,12 @@ function Hero() {
             DRESSING UP
           </h1>
 
-          <button className=" absolute flex left-1/2 -translate-x-1/2 bottom-8 mt-8  px-8 py-3">
+          <a href=""> <button className=" absolute flex left-1/2 -translate-x-1/2 bottom-8 mt-8  px-8 py-3">
             SCROLL DOWN <img src={scroll} alt="" />
-          </button>
+          </button></a>
 
         </div>
 
-
-        {/* Right content */}
 
         <div className="hidden lg:flex flex-col gap-5">
             <div className="bg-white w-72 p-4 flex gap-4 shadow-lg">
