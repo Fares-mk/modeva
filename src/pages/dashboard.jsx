@@ -59,7 +59,7 @@ function Dashboard() {
 
         {/* Table */}
         <div className="bg-white rounded-xl shadow overflow-x-auto">
-          <table className="w-full min-w-[624px]">
+          <table className="w-full min-w-[600px]">
             <thead className="bg-gray-100">
               <tr>
                 <th className="px-3 sm:px-6 py-4 text-left">Image</th>
