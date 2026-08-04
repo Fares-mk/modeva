@@ -3,6 +3,7 @@ import { LuUser, LuShoppingCart } from "react-icons/lu";
 import modeva from "../assets/images/Modeva.png"
 import user from "../assets/images/user.svg"
 import cart from "../assets/images/shopping-cart.svg"
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -27,11 +28,11 @@ function Navbar() {
             </a>
           </li>
 
-          <li><a href="">catalog</a></li>
-          <li><a href="">sale</a></li>
-          <li><a href="">New Arrival</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Dashboard</a></li>
+          <li><Link to="">catalog</Link></li>
+          <li><Link to="">sale</Link></li>
+          <li><Link to="">New Arrival</Link></li>
+          <li><Link to="">About</Link></li>
+          <li><Link to="/dashboard">Dashboard</Link></li>
 
           <li className="w-full lg:w-auto">
             <div className="flex flex-col sm:flex-row gap-3 items-center">

@@ -2,3 +2,12 @@
     font-family: "Playfair Display", sans-serif;
     font-weight: 500;
 }
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}

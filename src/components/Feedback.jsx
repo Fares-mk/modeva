@@ -1,9 +1,29 @@
 import circle from "../assets/images/brown circle.png"
 import star from "../assets/images/star.svg"
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/pagination";
 function Feedback() {
     return ( <>
-        <section className=" bg-[#F2F2F2] pt-20 top-1 flex gap-6 mb-10">
-            <div className="bg-white p-4">
+        <section className="bg-[#F2F2F2] pt-10 top-1 mb-10">
+            <Swiper
+                modules={[Pagination, Autoplay]}
+                spaceBetween={24}
+                slidesPerView={1    }
+                pagination={{ clickable: true }}
+                autoplay={{
+                    delay: 3000,
+                    disableOnInteraction: false,
+                }}
+                breakpoints={{
+                    768: {
+                    slidesPerView: 2,
+                    },
+                }}>
+            <SwiperSlide>            
+                <div className="bg-white p-4">
                 <div className="justify-between flex gap-6">
                 <div className="flex  gap-2">
                     <img src={circle} alt="" />
@@ -22,8 +42,10 @@ function Feedback() {
             </div>
             <p className="text-[#757575] w-dvh mt-6">Lorem ipsum dolor sit amet consectetur. Suspendisse laoreet scelerisque morbi vulputate. Quisque bibendum eget id diam elementum fringilla duis. Faucibus pharetra dictum quis feugiat eu augue semper et nulla. Lectus turpis ut et eros tortor placerat rhoncus. Imperdiet purus eu ornare vel. Donec commodo elementum.</p>
             </div>
+            </SwiperSlide>
 
-                        <div className="bg-white p-4">
+            <SwiperSlide>            
+                <div className="bg-white p-4">
                 <div className="justify-between flex gap-6">
                 <div className="flex  gap-2">
                     <img src={circle} alt="" />
@@ -42,6 +64,9 @@ function Feedback() {
             </div>
             <p className="text-[#757575] w-dvh mt-6">Lorem ipsum dolor sit amet consectetur. Suspendisse laoreet scelerisque morbi vulputate. Quisque bibendum eget id diam elementum fringilla duis. Faucibus pharetra dictum quis feugiat eu augue semper et nulla. Lectus turpis ut et eros tortor placerat rhoncus. Imperdiet purus eu ornare vel. Donec commodo elementum.</p>
             </div>
+            </SwiperSlide>
+
+            </Swiper>
         </section>
     
     </> );
