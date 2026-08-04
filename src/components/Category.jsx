@@ -10,13 +10,12 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 function Category({ title }) {
-  const [products, setproducts] = useState([]);
+  const [products, setProducts] = useState([]);
 
   const fetchProducts = async () => {
     try {
       const res = await getAllProduct();
-      console.log(res.data);
-      setproducts(res.data);
+      setProducts(res.data);
     } catch (e) {
       console.log(e);
     }
@@ -27,72 +26,172 @@ function Category({ title }) {
   }, []);
 
   return (
-    <>
-      <section className="p-10">
-        <p className="uppercase text-7xl mb-8">{title}</p>
+    <section className="p-5 sm:p-8 lg:p-10">
 
-        <Swiper
-          modules={[Pagination,]}
-          spaceBetween={24}
-          slidesPerView={1}
-          pagination={{ clickable: true }}
-          autoplay={{
-            delay: 3000,
-            disableOnInteraction: false,
-          }}
-          breakpoints={{
-            640: {
-              slidesPerView: 1,
-            },
-            768: {
-              slidesPerView: 2,
-            },
-            1024: {
-              slidesPerView: 4,
-            },
-          }}
-        >
-          {products.map((product) => (
-            <SwiperSlide key={product.id}>
-              <div>
-                <div className="relative mt-8 w-80 sm:px-3">
+      {/* Section Title */}
+      <p
+        className="
+          uppercase
+          text-3xl
+          sm:text-5xl
+          lg:text-7xl
+          mb-8
+        "
+      >
+        {title}
+      </p>
+
+
+      {/* Products Slider */}
+      <Swiper
+        modules={[Pagination, Autoplay]}
+        spaceBetween={20}
+        slidesPerView={1}
+        pagination={{
+          clickable: true,
+        }}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+        breakpoints={{
+          640: {
+            slidesPerView: 1,
+          },
+
+          768: {
+            slidesPerView: 2,
+          },
+
+          1024: {
+            slidesPerView: 4,
+          },
+        }}
+      >
+
+        {products.map((product) => (
+
+          <SwiperSlide key={product.id}>
+
+            <div className="w-full">
+
+              {/* Product Image */}
+              <div className="relative mt-8">
+
+                <img
+                  src={woman_section}
+                  alt={product.name}
+                  className="
+                    w-full
+                    h-72
+                    sm:h-80
+                    lg:h-96
+                    object-cover
+                  "
+                />
+
+
+                {/* Rating */}
+                <p
+                  className="
+                    absolute
+                    top-3
+                    right-3
+                    flex
+                    items-center
+                    justify-center
+                    gap-1
+                    rounded-2xl
+                    bg-[#008E93]
+                    text-white
+                    px-3
+                    py-1
+                    text-sm
+                  "
+                >
                   <img
-                    src={woman_section}
-                    alt={product.name}
-                    className="w-80 h-auto"
+                    src={star}
+                    alt="star"
+                    className="w-4 h-4"
                   />
 
-                  <p className="rounded-2xl flex items-center justify-center absolute top-1 right-1 pr-2 pl-2 gap-1 bg-[#008E93] text-white">
-                    <img src={star} alt="" />
-                    8.0
-                  </p>
-                </div>
+                  8.0
+                </p>
 
-                <div className="flex flex-col items-start">
-                  <p className="text-[#757575] text-sm pt-4">
-                    {product.category}
-                  </p>
-
-                  <h3 className="pt-1 pb-4 text-3xl">
-                    {product.name}
-                  </h3>
-
-                  <p className="text-[#757575] text-sm pb-8">
-                    `{product.price}$`
-                  </p>
-                </div>
               </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
 
-        <div className="mt-8">
-          <button className="bg-[#008E93] p-4 text-white">
-            SEE MORE
-          </button>
-        </div>
-      </section>
-    </>
+
+
+              {/* Product Details */}
+              <div className="flex flex-col items-start">
+
+                <p
+                  className="
+                    text-[#757575]
+                    text-sm
+                    pt-4
+                  "
+                >
+                  {product.category}
+                </p>
+
+
+                <h3
+                  className="
+                    pt-1
+                    pb-4
+                    text-xl
+                    sm:text-2xl
+                    lg:text-3xl
+                  "
+                >
+                  {product.name}
+                </h3>
+
+
+                <p
+                  className="
+                    text-[#757575]
+                    text-sm
+                    pb-8
+                  "
+                >
+                  {product.price}$
+                </p>
+
+              </div>
+
+
+            </div>
+
+          </SwiperSlide>
+
+        ))}
+
+      </Swiper>
+
+
+
+      {/* See More Button */}
+      <div className="mt-8">
+
+        <button
+          className="
+            bg-[#008E93]
+            px-6
+            py-3
+            text-white
+            transition
+            hover:bg-[#006f73]
+          "
+        >
+          SEE MORE
+        </button>
+
+      </div>
+
+
+    </section>
   );
 }
 
